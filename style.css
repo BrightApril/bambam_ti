@@ -1,17 +1,17 @@
 :root {
   color-scheme: light;
-  --bg: #00ffcc;
-  --surface: #fff200;
-  --surface-strong: #ff8ad8;
-  --ink: #20004f;
-  --muted: #003d82;
-  --line: #111111;
-  --primary: #ff00aa;
-  --primary-dark: #00a000;
-  --teal: #001eff;
-  --amber: #ff5a00;
-  --danger: #ff0000;
-  --shadow: 12px 12px 0 #ff00aa, 20px 20px 0 #00aaff;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-strong: #f1f5f9;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --teal: #0d9488;
+  --amber: #f59e0b;
+  --danger: #ef4444;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -21,14 +21,12 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background:
-    repeating-linear-gradient(45deg, rgba(255, 0, 170, 0.28) 0 14px, transparent 14px 28px),
-    radial-gradient(circle at 15% 12%, #fff200 0 70px, transparent 72px),
-    radial-gradient(circle at 86% 20%, #ff5a00 0 95px, transparent 97px),
-    linear-gradient(120deg, #00ffcc 0%, #b9ff00 38%, #f8c4ff 39%, #a7fffb 100%);
+  background: radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 0% 100%, rgba(13, 148, 136, 0.05) 0%, transparent 40%),
+              #f8fafc;
   color: var(--ink);
-  font-family: "Comic Sans MS", "Impact", "Malgun Gothic", cursive, sans-serif;
-  letter-spacing: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 button,
@@ -46,13 +44,12 @@ button {
   justify-content: space-between;
   gap: 20px;
   width: min(1120px, calc(100% - 32px));
-  margin: 18px auto 20px;
-  padding: 18px 22px;
-  border: 6px ridge #111111;
-  border-radius: 2px 22px 4px 18px;
-  background:
-    linear-gradient(90deg, #fff200, #ff00aa 31%, #00ff00 62%, #00aaff);
-  box-shadow: 9px 9px 0 #111111;
+  margin: 24px auto;
+  padding: 16px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .topbar h1,
@@ -60,32 +57,32 @@ button {
 .intro-panel h2,
 .view-title h2 {
   margin: 0;
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
 }
 
 .topbar h1 {
-  color: #ffffff;
-  font-size: clamp(28px, 4vw, 46px);
-  text-shadow: 3px 3px 0 #ff0000, 6px 6px 0 #0000ff;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .topbar h1::after {
-  content: " !!!";
-  color: #fff200;
+  display: none;
 }
 
 .eyebrow {
   display: inline-block;
   margin: 0 0 10px;
-  padding: 3px 9px;
-  border: 3px dotted #111111;
-  background: #00ff00;
-  color: #d10000;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  transform: rotate(-1.5deg);
+  transform: none;
 }
 
 .app-shell {
@@ -104,8 +101,8 @@ button {
 .login-panel,
 .student-card,
 .student-profile {
-  border: 5px solid var(--line);
-  border-radius: 3px 18px 6px 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
@@ -115,137 +112,129 @@ button {
   min-height: 390px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
   padding: 36px;
-  background:
-    linear-gradient(135deg, rgba(0, 30, 255, 0.45), transparent 32%),
-    repeating-linear-gradient(90deg, #fff200 0 28px, #ffb000 28px 42px, #f7ff72 42px 58px);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.04) 0%, rgba(79, 70, 229, 0.01) 100%), var(--surface);
 }
 
 .intro-panel::before {
-  content: "HOT";
-  position: absolute;
-  top: 22px;
-  right: 24px;
-  width: 104px;
-  height: 104px;
-  display: grid;
-  place-items: center;
-  border: 5px dashed #111111;
-  border-radius: 50%;
-  background: #ff00aa;
-  color: #ffffff;
-  font-family: Impact, "Malgun Gothic", sans-serif;
-  font-size: 34px;
-  transform: rotate(14deg);
-  text-shadow: 2px 2px 0 #0000ff;
+  display: none;
 }
 
 .intro-panel h2 {
   max-width: 720px;
-  color: #001eff;
-  font-size: clamp(32px, 5vw, 60px);
-  line-height: 1.04;
-  text-decoration: underline wavy #ff00aa 4px;
-  text-shadow: 2px 2px 0 #ffffff, 5px 5px 0 #00ff00;
+  color: var(--ink);
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.25;
+  text-decoration: none;
+  text-shadow: none;
+  font-weight: 700;
 }
 
 .intro-panel p:not(.eyebrow) {
   max-width: 620px;
-  margin: 22px 0 0;
-  border: 3px double #ff0000;
-  background: #ffffff;
-  color: #5b008e;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1.7;
-  padding: 14px;
+  margin: 20px 0 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 0;
 }
 
 .login-panel {
   display: grid;
   align-content: start;
-  gap: 13px;
-  padding: 28px;
-  background:
-    linear-gradient(180deg, #f8c4ff, #ffffff 41%, #c6ff00 42%, #ffffff);
-  transform: rotate(0.7deg);
+  gap: 16px;
+  padding: 32px;
+  background: var(--surface);
+  transform: none;
 }
 
 .login-panel h2 {
-  color: #ff0000;
-  font-size: 34px;
-  text-shadow: 2px 2px 0 #fff200;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .login-panel label {
   width: max-content;
-  padding: 2px 8px;
-  border-left: 8px solid #001eff;
-  background: #ff8ad8;
-  color: #111111;
-  font-weight: 900;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .login-panel input {
   width: 100%;
-  height: 48px;
-  border: 4px inset #808080;
-  border-radius: 0;
-  background: #eaffff;
-  color: #111111;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
   outline: none;
   padding: 0 14px;
-  font-weight: 800;
+  font-weight: 400;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .login-panel input:focus {
-  border-color: #ff00aa;
-  box-shadow: 0 0 0 5px #fff200, 0 0 0 9px #001eff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
 .form-message {
   min-height: 24px;
   margin: 4px 0 0;
   color: var(--danger);
-  font-weight: 900;
-  text-shadow: 1px 1px 0 #fff200;
+  font-weight: 500;
+  font-size: 14px;
+  text-shadow: none;
 }
 
 .primary-button,
 .ghost-button,
 .text-button {
   min-height: 44px;
-  border-radius: 2px 14px 2px 14px;
-  border: 4px outset #ffffff;
+  border-radius: 8px;
+  border: 1px solid transparent;
   padding: 0 18px;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
 }
 
 .primary-button {
-  background: linear-gradient(90deg, #00ff00, #fff200, #ff00aa);
-  color: #111111;
-  box-shadow: 5px 5px 0 #001eff;
+  background: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .primary-button:hover {
-  background: linear-gradient(90deg, #ff00aa, #00aaff, #fff200);
+  background: var(--primary-dark);
 }
 
 .ghost-button,
 .text-button {
-  background: #ff8ad8;
-  color: #001eff;
-  border-color: #111111;
-  box-shadow: 4px 4px 0 #fff200;
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+  box-shadow: none;
 }
 
 .ghost-button:hover,
 .text-button:hover {
-  background: #00ff00;
-  color: #ff0000;
+  background: var(--surface-strong);
+  color: var(--ink);
 }
 
 .view-header {
@@ -253,35 +242,38 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 22px;
-  padding: 14px 18px;
-  border: 5px dashed #ff00aa;
-  background: #fff200;
-  box-shadow: 7px 7px 0 #001eff;
+  margin-bottom: 24px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
 }
 
 .view-title h2 {
-  color: #ff0000;
-  font-size: clamp(26px, 4vw, 44px);
-  text-shadow: 2px 2px 0 #ffffff, 4px 4px 0 #00ff00;
+  color: var(--ink);
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .view-title p {
-  margin: 8px 0 0;
+  margin: 4px 0 0;
   color: var(--muted);
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .student-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
-  gap: 28px;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  gap: 24px;
 }
 
 .student-profile {
   overflow: hidden;
-  background: #f8c4ff;
-  transform: rotate(-0.6deg);
+  background: var(--surface);
+  transform: none;
 }
 
 .student-photo {
@@ -289,62 +281,65 @@ button {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  border-bottom: 6px groove #ff5a00;
+  border-bottom: 1px solid var(--line);
   background: var(--surface-strong);
-  filter: saturate(1.6) contrast(1.08);
+  filter: none;
 }
 
 .profile-body {
-  padding: 22px;
-  background:
-    repeating-linear-gradient(0deg, #ffffff 0 13px, #eaffff 13px 26px);
+  padding: 24px;
+  background: var(--surface);
 }
 
 .profile-body h3 {
   margin: 0;
-  color: #001eff;
-  font-size: 31px;
-  text-shadow: 2px 2px 0 #fff200;
+  color: var(--ink);
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .student-number {
   width: max-content;
-  margin: 8px 0 0;
-  padding: 4px 10px;
-  background: #00ff00;
-  color: #d10000;
-  font-weight: 900;
+  margin: 6px 0 0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .tag-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .tag {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  border: 3px solid #111111;
-  border-radius: 0 14px 0 14px;
-  padding: 0 12px;
-  background: #fff200;
-  color: #001eff;
-  font-size: 13px;
-  font-weight: 900;
-  box-shadow: 3px 3px 0 #ff00aa;
+  min-height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 10px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: none;
 }
 
 .tag:nth-child(even) {
-  background: #00aaff;
-  color: #ffffff;
+  background: rgba(79, 70, 229, 0.05);
+  color: var(--primary);
+  border-color: rgba(79, 70, 229, 0.1);
 }
 
 .content-stack {
   display: grid;
-  gap: 22px;
+  gap: 24px;
 }
 
 .section-title {
@@ -362,99 +357,104 @@ button {
 
 .section-title h3 {
   display: inline-block;
-  padding: 5px 12px;
-  background: #ff00aa;
-  color: #ffffff;
-  text-shadow: 2px 2px 0 #111111;
-  transform: rotate(-1deg);
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: none;
+  transform: none;
 }
 
 .grade-table {
   width: 100%;
   border-collapse: collapse;
   overflow: hidden;
-  border: 5px ridge #111111;
-  border-radius: 0;
-  background: #ffffff;
-  box-shadow: 6px 6px 0 #00aaff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: none;
 }
 
 .grade-table th,
 .grade-table td {
-  padding: 12px;
-  border: 3px solid #111111;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid var(--line);
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.grade-table tr:last-child th,
+.grade-table tr:last-child td {
+  border-bottom: none;
 }
 
 .grade-table th {
-  width: 46%;
-  background: #00ff00;
-  color: #001eff;
+  width: 40%;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-weight: 500;
 }
 
 .grade-table td {
-  background: #fff200;
-  color: #d10000;
-  font-weight: 900;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .grade-table tr:nth-child(even) th {
-  background: #ff8ad8;
+  background: var(--surface-strong);
 }
 
 .grade-table tr:nth-child(even) td {
-  background: #eaffff;
+  background: var(--surface);
 }
 
 .memo-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .memo-list li {
-  border: 4px dotted #001eff;
-  border-left: 12px solid var(--amber);
-  border-radius: 0 18px 3px 0;
-  background: #ffffff;
-  color: #5b008e;
-  font-weight: 800;
-  padding: 12px 14px;
-  box-shadow: 5px 5px 0 #fff200;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 14px;
+  box-shadow: none;
 }
 
 .memo-list li:nth-child(2n) {
-  background: #f8c4ff;
-  border-color: #00ff00;
+  background: var(--surface);
+  border-color: var(--line);
+  border-left-color: var(--teal);
 }
 
 .admin-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  margin-top: 22px;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .student-card {
   overflow: hidden;
-  background: #ffffff;
+  background: var(--surface);
+  transform: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.student-card:nth-child(1) {
-  transform: rotate(-1deg);
-}
-
-.student-card:nth-child(2) {
-  transform: rotate(1.2deg);
-  background: #c6ff00;
-}
-
-.student-card:nth-child(3) {
-  transform: rotate(-0.4deg);
-  background: #ff8ad8;
+.student-card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .student-card .student-photo {
@@ -462,13 +462,14 @@ button {
 }
 
 .student-card-body {
-  padding: 18px;
+  padding: 20px;
 }
 
 .student-card h3 {
-  color: #ff0000;
-  font-size: 24px;
-  text-shadow: 2px 2px 0 #fff200;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: none;
 }
 
 .compact-table {
@@ -477,8 +478,8 @@ button {
 
 .compact-table th,
 .compact-table td {
-  padding: 9px;
-  font-size: 14px;
+  padding: 10px 14px;
+  font-size: 13px;
 }
 
 .hidden {
@@ -511,13 +512,11 @@ button {
 
   .intro-panel,
   .login-panel {
-    padding: 22px;
+    padding: 24px;
   }
 
   .intro-panel::before {
-    width: 76px;
-    height: 76px;
-    font-size: 25px;
+    display: none;
   }
 
   .view-header {

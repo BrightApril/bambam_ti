@@ -73,6 +73,7 @@ button {
 
 .eyebrow {
   display: inline-block;
+  align-self: flex-start;
   margin: 0 0 10px;
   padding: 4px 10px;
   border-radius: 6px;
@@ -331,12 +332,6 @@ button {
   box-shadow: none;
 }
 
-.tag:nth-child(even) {
-  background: rgba(79, 70, 229, 0.05);
-  color: var(--primary);
-  border-color: rgba(79, 70, 229, 0.1);
-}
-
 .content-stack {
   display: grid;
   gap: 24px;
@@ -430,12 +425,6 @@ button {
   font-size: 14px;
   padding: 14px;
   box-shadow: none;
-}
-
-.memo-list li:nth-child(2n) {
-  background: var(--surface);
-  border-color: var(--line);
-  border-left-color: var(--teal);
 }
 
 .admin-grid {

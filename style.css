@@ -471,6 +471,141 @@ button {
   font-size: 13px;
 }
 
+.counseling-panel {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 14px;
+}
+
+.counseling-guide {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.counseling-selected {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+}
+
+.counseling-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.counseling-selected-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.counseling-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.counseling-tag.display {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.counseling-tag.anon {
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--primary);
+}
+
+.counseling-label {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.counseling-textarea {
+  width: 100%;
+  min-height: 96px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 12px 14px;
+  resize: vertical;
+  outline: none;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.counseling-textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.counseling-preview {
+  display: grid;
+  gap: 8px;
+}
+
+.counseling-preview-box {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--ink);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+#counselingSubmit {
+  width: max-content;
+}
+
+.counseling-result {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.counseling-disclaimer {
+  margin: 0;
+  padding-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
 .hidden {
   display: none !important;
 }

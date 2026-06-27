@@ -1,0 +1,9 @@
+# 환경 변수 파일은 절대 GitHub에 올리지 않는다. (GEMINI_API_KEY 등 비밀 값 보호)
+.env
+.env.local
+
+# 로컬 작업 산출물
+.omc/
+.playwright-mcp/
+node_modules/
+.vercel
